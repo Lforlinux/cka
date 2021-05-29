@@ -1,0 +1,20 @@
+kind: Deployment  
+apiVersion: apps/v1
+metadata:
+  name: my-svc-deployment
+  # labels:   not mandatory 
+spec:
+  selector: 
+    matchLabels: 
+      app: my-svc-deployment
+  template:   # pod template which need to be created, which include always about the pod metadata & spec
+    metadata:
+      #name: test
+      labels: 
+        app: my-svc-deployment
+    spec:
+      containers:
+      - name: my-svc-deployment
+        image: katacoda/docker-http-server:latest
+        ports:
+        - containerPort: 80

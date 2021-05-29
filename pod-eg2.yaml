@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+
+  labels:
+    run: cka-pods-
+
+
+spec:
+  containers:
+  - image: nginx
+    name: cka-pods-4
+
+status: {}
