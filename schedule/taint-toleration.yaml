@@ -9,7 +9,7 @@ spec:
   - image: nginx
     name: colour-pods
   tolerations:
-  - key: "colour"
+  - key: "app"
     value: "blue"
     operator: "Equal"
     effect: "NoSchedule"

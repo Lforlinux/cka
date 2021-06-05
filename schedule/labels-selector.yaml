@@ -1,7 +1,7 @@
 kind: Pod   ## type of resource we want to create in k8s cluster -- kubectl api-resources
 apiVersion: v1
 metadata:
-  name: cka
+  name: labels-selectors-pod
   labels:    ## defining lables for pods is mandatory 
     app: web
     funtion: front-end 

@@ -1,0 +1,42 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata: 
+  name: vol-dep 
+spec:
+  replicas: 4
+  selector: 
+    matchLabels:
+      type: volpod
+  template:
+    metadata:
+      labels:
+        type: volpod
+    spec:
+      terminationGracePeriodSeconds: 0
+      restartPolicy: Always
+      volumes:
+       - name: demo-vol 
+         emptyDir: {}
+      containers:
+       - name: cont1 
+         image: httpd
+         ports:
+           - name: http 
+             containerPort: 80
+         volumeMounts:
+          - name: demo-vol
+            mountPath: /edrive
+       - name: cont2 
+         image: lforlinux/sampleapp:v1
+         ports:
+           - name: http 
+             containerPort: 8080
+         volumeMounts: 
+          - name: demo-vol
+            mountPath: /fdrive
+       - name: cont3
+         image: alpine
+         command: ["sh", "-c", "sleep 3600"]
+         volumeMounts:
+          - name: demo-vol
+            mountPath: /gdrive
