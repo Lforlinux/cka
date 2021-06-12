@@ -1,32 +1,5 @@
 
 
-
-Dockerfile
-
-https://github.com/Lforlinux/nginx-docker/
-
-Docker-compose
-
-https://github.com/Lforlinux/nginx-docker-compose
-
-
-
-https://github.com/Lforlinux/cka.git
-
-
-
-Google Drive Link:
-https://drive.google.com/drive/folders/1XOI34uWCm9D7G75FCK8QYMZ9BvTpnl0h
-
-
-
-Community Link:
-
-https://community.simplilearn.com/threads/certified-kubernetes-administrator-lakshmi-narayanan.65992/
-
-https://notes.orga.cat/ctpgb
-
-
 ```
 sudo su -
 sudo apt-get update
