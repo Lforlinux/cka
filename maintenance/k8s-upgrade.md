@@ -11,7 +11,7 @@ $ kubeadm version
 
 # pin the version to 
 version=1.19.3-00 
-kubeadm_version=v.1.19.3
+kubeadm_version=v1.19.3
 
 apt-mark unhold kubeadm && \
 apt-get update && apt-get install -y kubeadm=$version && \
@@ -52,7 +52,7 @@ kubectl uncordon controlplane
 
 Upgrade kubeadm 
 version=1.19.3-00 
-kubeadm_version=v.1.19.3
+kubeadm_version=v1.19.3
 
 apt-mark unhold kubeadm && \
 apt-get update && apt-get install -y kubeadm=$version && \
@@ -66,6 +66,9 @@ sudo kubeadm upgrade node
 apt-mark unhold kubelet kubectl && \
 apt-get update && apt-get install -y kubelet=$version kubectl=$version && \
 apt-mark hold kubelet kubectl
+
+#    (from-master)
+
 
 # restart the componets 
 sudo systemctl daemon-reload
