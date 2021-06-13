@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: clusterip-taget-deployement
-        image: katacoda/docker-http-server:latest
+        image: lforlinux/http-server:v1
         ports:
         - containerPort: 80

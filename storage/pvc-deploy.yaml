@@ -15,7 +15,7 @@ spec:
       volumes:
         - name: pvvol
           persistentVolumeClaim:
-            claimName: pv1-pvc
+            claimName: my-pvc
       containers:
         - name: cont1
           image: tomcat

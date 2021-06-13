@@ -1,11 +1,11 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: pv1-pvc
+  name: my-pvc
   labels:
     type: local
 spec:
-  volumeName: pv1   ## must be the pv name that you want to claim
+  volumeName: my-pv   ## must be the pv name that you want to claim
   resources:
     requests:
       storage: 2Gi

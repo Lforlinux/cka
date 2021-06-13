@@ -6,7 +6,7 @@ metadata:
       group: manual-pod
     
 spec: 
-   nodeName: kubenode02
+   nodeName: ip-172-31-31-187
    containers: 
      - name: cont1 
        image: nginx   
