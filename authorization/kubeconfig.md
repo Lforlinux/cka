@@ -98,9 +98,9 @@ No resources found in dev namespace.
 
 
 Clusterole: and binding 
-#kubectl create clusterrole mycluster-role-read-only-admin --verb=get,watch,list --resource=pods 
+#kubectl create clusterrole mycluster-role-read-only-admin --verb=list,get,create,delete --resource=nodes
 #kubectl create clusterrolebinding mycluster-role-binding --clusterrole=mycluster-role-read-only-admin --user=prod-user
-#kubectl auth can-i list pods  --as prod-user  -n dev
+#kubectl auth can-i list nodes  --as prod-user  -n dev
 
 
 
